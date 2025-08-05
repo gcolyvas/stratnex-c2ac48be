@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
   title: string;
@@ -9,6 +10,19 @@ interface ServiceCardProps {
   features: string[];
   className?: string;
 }
+
+const getServiceRoute = (title: string) => {
+  switch (title) {
+    case "StratNex Agri":
+      return "/services/stratnex-agri";
+    case "StratNex Properties":
+      return "/services/stratnex-properties";
+    case "StratNex Digital":
+      return "/services/stratnex-digital";
+    default:
+      return "/services";
+  }
+};
 
 const ServiceCard = ({ title, description, icon, features, className }: ServiceCardProps) => {
   return (
@@ -34,13 +48,15 @@ const ServiceCard = ({ title, description, icon, features, className }: ServiceC
           ))}
         </ul>
         
-        <Button 
-          variant="services" 
-          className="group-hover:shadow-lg transition-all duration-300"
-        >
-          Learn More
-          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-        </Button>
+        <Link to={getServiceRoute(title)}>
+          <Button 
+            variant="services" 
+            className="group-hover:shadow-lg transition-all duration-300 w-full"
+          >
+            Learn More
+            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
       </CardContent>
     </Card>
   );
