@@ -68,9 +68,11 @@ const About = () => {
                 <CardContent className="p-8">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div className="md:col-span-1">
-                      <div className="w-48 h-48 bg-gradient-hero rounded-full mx-auto flex items-center justify-center">
-                        <span className="text-6xl font-bold text-brand-white">JC</span>
-                      </div>
+                      <img 
+                        src="/lovable-uploads/1ce91eed-d0b8-44de-a221-b554d2a61d4d.png" 
+                        alt="Jamal Colyvas" 
+                        className="w-48 h-48 rounded-full mx-auto object-cover shadow-elegant"
+                      />
                     </div>
                     <div className="md:col-span-2">
                       <h3 className="text-2xl font-bold text-brand-navy mb-2">Jamal Colyvas</h3>
