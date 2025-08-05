@@ -103,6 +103,7 @@ const Contact = () => {
                     </div>
                     <p className="text-brand-dark-gray mb-4">
                       StratNex Consulting<br />
+                      House No. 1 Makumbusho, Bagamoyo Rd<br />
                       Dar es Salaam, Tanzania<br />
                       East Africa
                     </p>
@@ -120,10 +121,10 @@ const Contact = () => {
                       <h3 className="text-lg font-bold text-brand-navy">Phone & WhatsApp</h3>
                     </div>
                     <p className="text-brand-dark-gray mb-2">
-                      <strong>Phone:</strong> +255 XXX XXX XXX
+                      <strong>Phone:</strong> +255 744 400 200
                     </p>
                     <p className="text-brand-dark-gray mb-4">
-                      <strong>WhatsApp:</strong> +255 XXX XXX XXX
+                      <strong>WhatsApp:</strong> +255 744 400 200
                     </p>
                     <p className="text-brand-dark-gray text-sm">
                       Available for urgent consultations and quick inquiries.
@@ -138,16 +139,16 @@ const Contact = () => {
                       <h3 className="text-lg font-bold text-brand-navy">Email</h3>
                     </div>
                     <p className="text-brand-dark-gray mb-2">
-                      <strong>General:</strong> info@stratnex.co.tz
+                      <strong>General:</strong> info@stratnexconsulting.com
                     </p>
                     <p className="text-brand-dark-gray mb-2">
-                      <strong>Agribusiness:</strong> agri@stratnex.co.tz
+                      <strong>Agribusiness:</strong> agri@stratnexconsulting.com
                     </p>
                     <p className="text-brand-dark-gray mb-2">
-                      <strong>Real Estate:</strong> properties@stratnex.co.tz
+                      <strong>Real Estate:</strong> properties@stratnexconsulting.com
                     </p>
                     <p className="text-brand-dark-gray mb-4">
-                      <strong>Digital:</strong> digital@stratnex.co.tz
+                      <strong>Digital:</strong> digital@stratnexconsulting.com
                     </p>
                   </CardContent>
                 </Card>
@@ -159,13 +160,10 @@ const Contact = () => {
                       <h3 className="text-lg font-bold text-brand-navy">Business Hours</h3>
                     </div>
                     <p className="text-brand-dark-gray mb-2">
-                      <strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM
-                    </p>
-                    <p className="text-brand-dark-gray mb-2">
-                      <strong>Saturday:</strong> 9:00 AM - 2:00 PM
+                      <strong>Monday - Friday:</strong> 8:30 AM - 4:30 PM
                     </p>
                     <p className="text-brand-dark-gray mb-4">
-                      <strong>Sunday:</strong> Closed
+                      <strong>Weekend:</strong> Closed
                     </p>
                     <p className="text-brand-dark-gray text-sm">
                       East Africa Time (EAT) - UTC+3
