@@ -22,14 +22,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-hero p-2 rounded-lg">
-              <span className="text-brand-white font-bold text-xl">SN</span>
-            </div>
-            <div>
-              <span className="text-xl font-bold text-brand-navy">StratNex</span>
-              <span className="text-sm text-brand-dark-gray block">Consulting</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
+              alt="StratNex Consulting" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
