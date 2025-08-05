@@ -8,15 +8,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-brand-white p-2 rounded-lg">
-                <span className="text-brand-navy font-bold text-xl">SN</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold">StratNex</span>
-                <span className="text-sm text-brand-light-gray block">Consulting</span>
-              </div>
-            </div>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
+                alt="StratNex Consulting" 
+                className="h-8 w-auto brightness-0 invert"
+              />
+            </Link>
             <p className="text-brand-light-gray text-sm">
               Connecting business opportunities across Tanzania through strategic
               consulting in agribusiness, real estate, and digital marketing.
@@ -73,15 +71,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-brand-light-gray">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>Dar es Salaam, Tanzania</span>
+                <span>House No. 1 Makumbusho, Bagamoyo Rd, Dar es Salaam</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+255 XXX XXX XXX</span>
+                <span>+255 744 400 200</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@stratnex.co.tz</span>
+                <span>info@stratnexconsulting.com</span>
               </div>
             </div>
 
