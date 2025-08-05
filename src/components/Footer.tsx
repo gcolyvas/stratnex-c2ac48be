@@ -1,19 +1,13 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Linkedin, Facebook, Twitter } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-brand-navy text-brand-white">
+  return <footer className="bg-brand-navy text-brand-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
-                alt="StratNex Consulting" 
-                className="h-8 w-auto brightness-0 invert"
-              />
+              <img src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" alt="StratNex Consulting" className="h-8 w-auto brightness-0 invert" />
             </Link>
             <p className="text-brand-light-gray text-sm">
               Connecting business opportunities across Tanzania through strategic
@@ -100,7 +94,7 @@ const Footer = () => {
 
         <div className="border-t border-brand-dark-gray pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-brand-light-gray">
-            <p>&copy; 2024 StratNex Consulting. All rights reserved.</p>
+            <p>© 2025 StratNex Consulting. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="#" className="hover:text-brand-white transition-colors">
                 Privacy Policy
@@ -112,8 +106,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
