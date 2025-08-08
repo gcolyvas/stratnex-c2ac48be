@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
+import QuoteRequestForm from "@/components/QuoteRequestForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Users, Award, Globe } from "lucide-react";
@@ -201,10 +202,12 @@ const Index = () => {
                 to unlock their potential in Tanzania's dynamic markets.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="services" size="lg" className="bg-brand-white text-brand-navy hover:bg-brand-light-gray">
-                  Get Started Today
-                  <ArrowRight className="h-5 w-5 ml-2" />
-                </Button>
+                <QuoteRequestForm>
+                  <Button variant="services" size="lg" className="bg-brand-white text-brand-navy hover:bg-brand-light-gray">
+                    Get Started Today
+                    <ArrowRight className="h-5 w-5 ml-2" />
+                  </Button>
+                </QuoteRequestForm>
                 <Button 
                   variant="services" 
                   size="lg" 
