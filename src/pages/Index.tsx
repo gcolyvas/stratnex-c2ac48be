@@ -6,6 +6,7 @@ import QuoteRequestForm from "@/components/QuoteRequestForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Users, Award, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 import agriIcon from "@/assets/agri-icon.png";
 import realestateIcon from "@/assets/realestate-icon.png";
 import digitalIcon from "@/assets/digital-icon.png";
@@ -208,13 +209,15 @@ const Index = () => {
                     <ArrowRight className="h-5 w-5 ml-2" />
                   </Button>
                 </QuoteRequestForm>
-                <Button 
-                  variant="services" 
-                  size="lg" 
-                  className="bg-transparent border-2 border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-navy"
-                >
-                  Learn More
-                </Button>
+                <Link to="/services">
+                  <Button 
+                    variant="services" 
+                    size="lg" 
+                    className="bg-transparent border-2 border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-navy"
+                  >
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
