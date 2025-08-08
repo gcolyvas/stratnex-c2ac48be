@@ -16,6 +16,7 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    service: "",
     projectDetails: "",
     budgetRange: "",
   });
@@ -25,7 +26,7 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.name || !formData.email || !formData.projectDetails || !formData.budgetRange) {
+    if (!formData.name || !formData.email || !formData.service || !formData.projectDetails || !formData.budgetRange) {
       toast({
         title: "Error",
         description: "Please fill in all fields",
@@ -46,6 +47,7 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
     setFormData({
       name: "",
       email: "",
+      service: "",
       projectDetails: "",
       budgetRange: "",
     });
@@ -105,11 +107,29 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
           </div>
 
           <div className="space-y-2">
+            <Label htmlFor="service" className="text-brand-dark-gray font-medium">
+              Service Required *
+            </Label>
+            <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
+              <SelectTrigger className="border-brand-light-gray focus:border-brand-navy focus:ring-brand-navy">
+                <SelectValue placeholder="Select the service you need" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="stratnex-agri">StratNex Agri - Agricultural Consulting</SelectItem>
+                <SelectItem value="stratnex-properties">StratNex Properties - Real Estate Services</SelectItem>
+                <SelectItem value="stratnex-digital">StratNex Digital - Digital Marketing</SelectItem>
+                <SelectItem value="multiple">Multiple Services</SelectItem>
+                <SelectItem value="consultation">General Consultation</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
             <Label htmlFor="budget" className="text-brand-dark-gray font-medium">
               Budget Range *
             </Label>
             <Select value={formData.budgetRange} onValueChange={(value) => handleInputChange("budgetRange", value)}>
-              <SelectTrigger className="border-brand-light-gray focus:border-brand-navy">
+              <SelectTrigger className="border-brand-light-gray focus:border-brand-navy focus:ring-brand-navy">
                 <SelectValue placeholder="Select your budget range" />
               </SelectTrigger>
               <SelectContent>
@@ -148,7 +168,7 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
             </Button>
             <Button
               type="submit"
-              className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
+              className="flex-1 bg-brand-navy hover:bg-brand-navy/90 text-brand-white font-medium transition-all duration-300 hover:shadow-elegant transform hover:-translate-y-0.5"
             >
               Submit Quote Request
             </Button>
