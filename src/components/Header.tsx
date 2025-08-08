@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import QuoteRequestForm from "./QuoteRequestForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,11 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="hero" size="sm">
-              Get Quote
-            </Button>
+            <QuoteRequestForm>
+              <Button variant="hero" size="sm">
+                Get Quote
+              </Button>
+            </QuoteRequestForm>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -81,9 +84,11 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button variant="hero" size="sm" className="self-start">
-                Get Quote
-              </Button>
+              <QuoteRequestForm>
+                <Button variant="hero" size="sm" className="self-start">
+                  Get Quote
+                </Button>
+              </QuoteRequestForm>
             </div>
           </nav>
         )}
