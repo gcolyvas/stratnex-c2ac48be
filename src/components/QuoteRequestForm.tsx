@@ -18,7 +18,6 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
     email: "",
     service: "",
     projectDetails: "",
-    budgetRange: "",
   });
   const { toast } = useToast();
 
@@ -26,7 +25,7 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.name || !formData.email || !formData.service || !formData.projectDetails || !formData.budgetRange) {
+    if (!formData.name || !formData.email || !formData.service || !formData.projectDetails) {
       toast({
         title: "Error",
         description: "Please fill in all fields",
@@ -49,7 +48,6 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
       email: "",
       service: "",
       projectDetails: "",
-      budgetRange: "",
     });
     setIsOpen(false);
   };
@@ -124,24 +122,6 @@ const QuoteRequestForm = ({ children }: QuoteRequestFormProps) => {
             </Select>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="budget" className="text-brand-dark-gray font-medium">
-              Budget Range *
-            </Label>
-            <Select value={formData.budgetRange} onValueChange={(value) => handleInputChange("budgetRange", value)}>
-              <SelectTrigger className="border-brand-light-gray focus:border-brand-navy focus:ring-brand-navy">
-                <SelectValue placeholder="Select your budget range" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="under-5k">Under $5,000</SelectItem>
-                <SelectItem value="5k-10k">$5,000 - $10,000</SelectItem>
-                <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-                <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-                <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                <SelectItem value="over-100k">Over $100,000</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
 
           <div className="space-y-2">
             <Label htmlFor="projectDetails" className="text-brand-dark-gray font-medium">
