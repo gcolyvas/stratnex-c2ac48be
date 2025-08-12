@@ -3,11 +3,13 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import agriIcon from "@/assets/agri-icon.png";
 import realestateIcon from "@/assets/realestate-icon.png";
 import digitalIcon from "@/assets/digital-icon.png";
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       title: "StratNex Agri",
@@ -151,7 +153,12 @@ const Services = () => {
               <p className="text-brand-light-gray mb-8 text-lg">
                 Let's discuss how StratNex Consulting can help you achieve your goals.
               </p>
-              <Button variant="services" size="lg" className="bg-brand-white text-brand-navy hover:bg-brand-light-gray">
+              <Button 
+                variant="services" 
+                size="lg" 
+                className="bg-brand-white text-brand-navy hover:bg-brand-light-gray"
+                onClick={() => navigate('/contact')}
+              >
                 Get Started Today
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
