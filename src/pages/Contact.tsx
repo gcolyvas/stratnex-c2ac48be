@@ -18,10 +18,10 @@ const Contact = () => {
         <section className="py-20 bg-gradient-services">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-brand-navy mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy mb-6">
                 Contact Us
               </h1>
-              <p className="text-xl text-brand-dark-gray leading-relaxed">
+              <p className="text-lg sm:text-xl text-brand-dark-gray leading-relaxed px-4">
                 Ready to transform your business? Get in touch with our expert team to discuss 
                 your goals and discover how StratNex Consulting can help you succeed.
               </p>
@@ -32,7 +32,7 @@ const Contact = () => {
         {/* Contact Information */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
               
               {/* Contact Form */}
               <Card className="shadow-card">
@@ -40,7 +40,7 @@ const Contact = () => {
                   <h2 className="text-2xl font-bold text-brand-navy mb-6">Send Us a Message</h2>
                   
                   <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="firstName">First Name</Label>
                         <Input id="firstName" placeholder="Your first name" className="mt-1" />
@@ -180,11 +180,11 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-brand-navy mb-4">Frequently Asked Questions</h2>
-                <p className="text-brand-dark-gray">Quick answers to common questions about our services</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-brand-navy mb-4">Frequently Asked Questions</h2>
+                <p className="text-brand-dark-gray px-4">Quick answers to common questions about our services</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 <Card className="shadow-card">
                   <CardContent className="p-6">
                     <h3 className="text-lg font-bold text-brand-navy mb-3">

@@ -61,10 +61,10 @@ const Services = () => {
         <section className="py-20 bg-gradient-services">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-brand-navy mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy mb-6">
                 Our Services
               </h1>
-              <p className="text-xl text-brand-dark-gray leading-relaxed">
+              <p className="text-lg sm:text-xl text-brand-dark-gray leading-relaxed px-4">
                 Three specialized divisions working in harmony to deliver comprehensive 
                 business solutions across Tanzania's most dynamic sectors.
               </p>
@@ -75,7 +75,7 @@ const Services = () => {
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
                 <ServiceCard 
                   key={index}
@@ -98,7 +98,7 @@ const Services = () => {
                 <p className="text-brand-dark-gray">How we deliver exceptional results for our clients</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 <div className="text-center">
                   <div className="bg-brand-navy text-brand-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                     1
@@ -146,7 +146,7 @@ const Services = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center bg-gradient-hero rounded-3xl p-12">
+            <div className="max-w-4xl mx-auto text-center bg-gradient-hero rounded-3xl p-6 md:p-12">
               <h2 className="text-3xl font-bold text-brand-white mb-4">
                 Ready to Transform Your Business?
               </h2>

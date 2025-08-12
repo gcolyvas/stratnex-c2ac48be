@@ -28,22 +28,22 @@ const ServiceCard = ({ title, description, icon, features, className }: ServiceC
   return (
     <Card className={`group hover:shadow-card transition-all duration-300 hover:-translate-y-1 ${className}`}>
       <CardContent className="p-8">
-        <div className="flex items-center space-x-4 mb-6">
-          <div className="bg-gradient-hero p-3 rounded-lg">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+          <div className="bg-gradient-hero p-3 rounded-lg flex-shrink-0">
             <img src={icon} alt={title} className="h-8 w-8 brightness-0 invert" />
           </div>
-          <h3 className="text-xl font-bold text-brand-navy">{title}</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-brand-navy text-center sm:text-left">{title}</h3>
         </div>
         
-        <p className="text-brand-dark-gray mb-6 leading-relaxed">
+        <p className="text-brand-dark-gray mb-6 leading-relaxed text-center sm:text-left text-sm sm:text-base">
           {description}
         </p>
         
-        <ul className="space-y-2 mb-6">
+        <ul className="space-y-2 mb-6 text-center sm:text-left">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-sm text-brand-dark-gray">
-              <div className="h-1.5 w-1.5 bg-brand-navy rounded-full mr-3"></div>
-              {feature}
+            <li key={index} className="flex items-start text-sm text-brand-dark-gray">
+              <div className="h-1.5 w-1.5 bg-brand-navy rounded-full mr-3 mt-2 flex-shrink-0"></div>
+              <span className="break-words">{feature}</span>
             </li>
           ))}
         </ul>

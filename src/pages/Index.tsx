@@ -60,16 +60,16 @@ const Index = () => {
         <section id="services" className="py-20 bg-gradient-services">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-brand-navy mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-4">
                 Our Services
               </h2>
-              <p className="text-xl text-brand-dark-gray max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-brand-dark-gray max-w-3xl mx-auto px-4">
                 Three specialized divisions delivering comprehensive business solutions 
                 across Tanzania's most dynamic and promising sectors.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
                 <ServiceCard 
                   key={index}
@@ -88,15 +88,15 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-brand-navy mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-4">
                   Why Choose StratNex?
                 </h2>
-                <p className="text-xl text-brand-dark-gray">
+                <p className="text-lg sm:text-xl text-brand-dark-gray px-4">
                   Local expertise meets global standards for exceptional results
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <Card className="text-center shadow-card hover:shadow-elegant transition-all duration-300">
                   <CardContent className="p-6">
                     <Users className="h-12 w-12 text-brand-navy mx-auto mb-4" />
@@ -146,15 +146,15 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-brand-navy mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-brand-navy mb-4">
                   Client Success Stories
                 </h2>
-                <p className="text-xl text-brand-dark-gray">
+                <p className="text-lg sm:text-xl text-brand-dark-gray px-4">
                   Hear from businesses we've helped transform and grow
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                 <Card className="shadow-card">
                   <CardContent className="p-8">
                     <blockquote className="text-brand-dark-gray italic mb-6">
@@ -194,7 +194,7 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center bg-gradient-hero rounded-3xl p-12">
+            <div className="max-w-4xl mx-auto text-center bg-gradient-hero rounded-3xl p-6 md:p-12">
               <h2 className="text-3xl font-bold text-brand-white mb-4">
                 Ready to Transform Your Business?
               </h2>

@@ -13,10 +13,10 @@ const About = () => {
         <section className="py-20 bg-gradient-services">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-brand-navy mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy mb-6">
                 About StratNex Consulting
               </h1>
-              <p className="text-xl text-brand-dark-gray leading-relaxed">
+              <p className="text-lg sm:text-xl text-brand-dark-gray leading-relaxed px-4">
                 Founded with a vision to bridge opportunities across Tanzania's most promising sectors,
                 StratNex Consulting combines local market knowledge with international best practices.
               </p>
@@ -27,7 +27,7 @@ const About = () => {
         {/* Mission & Vision */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
               <Card className="shadow-card">
                 <CardContent className="p-8">
                   <Target className="h-12 w-12 text-brand-navy mb-6" />
@@ -66,15 +66,15 @@ const About = () => {
 
               <Card className="shadow-card">
                 <CardContent className="p-8">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                    <div className="md:col-span-1">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div className="lg:col-span-1">
                       <img 
                         src="/lovable-uploads/1ce91eed-d0b8-44de-a221-b554d2a61d4d.png" 
                         alt="Jamal Colyvas" 
-                        className="w-48 h-48 rounded-full mx-auto object-cover shadow-elegant"
+                        className="w-40 sm:w-48 h-40 sm:h-48 rounded-full mx-auto object-cover shadow-elegant"
                       />
                     </div>
-                    <div className="md:col-span-2">
+                    <div className="lg:col-span-2 text-center lg:text-left">
                       <h3 className="text-2xl font-bold text-brand-navy mb-2">Jamal Colyvas</h3>
                       <p className="text-brand-dark-gray mb-4 font-medium">Founder & CEO</p>
                       <p className="text-brand-dark-gray leading-relaxed mb-4">
@@ -104,7 +104,7 @@ const About = () => {
                 <p className="text-brand-dark-gray">The principles that guide everything we do</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <Card className="text-center shadow-card hover:shadow-elegant transition-all duration-300">
                   <CardContent className="p-6">
                     <Award className="h-12 w-12 text-brand-navy mx-auto mb-4" />

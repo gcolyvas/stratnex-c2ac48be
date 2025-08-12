@@ -32,14 +32,14 @@ const HeroSection = () => {
       <div className="relative z-20 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-brand-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-white mb-6 leading-tight">
             Connecting Business 
             <span className="block text-brand-light-gray">Opportunities</span>
-            <span className="block text-3xl md:text-4xl font-normal mt-2">in Tanzania</span>
+            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal mt-2">in Tanzania</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-brand-light-gray mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-brand-light-gray mb-8 max-w-2xl mx-auto leading-relaxed px-4">
             Strategic consulting across agribusiness, real estate, and digital marketing. 
             Local expertise meets global standards.
           </p>

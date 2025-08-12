@@ -63,9 +63,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <div className="space-y-3 text-sm text-brand-light-gray">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span>House No. 1 Makumbusho, Bagamoyo Rd, Dar es Salaam</span>
+                     <div className="flex items-start space-x-2">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span className="text-sm break-words">House No. 1 Makumbusho, Bagamoyo Rd, Dar es Salaam</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
