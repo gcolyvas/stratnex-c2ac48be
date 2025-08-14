@@ -1,21 +1,5 @@
 name = "stratnex-consulting"
-compatibility_date = "2023-12-01"
-
-[env.production]
-account_id = ""
-route = ""
-
-[[env.production.kv_namespaces]]
-binding = "KV"
-id = ""
-
-[build]
-command = "npm run build"
-cwd = "."
-watch_dir = "src"
-
-[build.upload]
-format = "service-worker"
+compatibility_date = "2024-03-14"
 
 [[redirects]]
 from = "/*"
