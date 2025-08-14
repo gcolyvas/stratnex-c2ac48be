@@ -1,5 +1,5 @@
 name = "stratnex-consulting"
-compatibility_date = "2024-03-14"
+compatibility_date = "2025-08-14"
 
 [assets]
 directory = "./dist"
