@@ -25,14 +25,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 
-              src="/lovable-uploads/9f6cc1c8-a6ed-4432-beb6-6b24541598c0.png" 
-              alt="StratNex Consulting" 
-              className="h-8 w-auto sm:h-10 md:h-12 hidden sm:block transition-transform duration-300 group-hover:scale-105"
-            />
-            <img 
               src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
               alt="StratNex Consulting" 
-              className="h-8 w-auto sm:hidden transition-transform duration-300 group-hover:scale-105"
+              className="h-8 w-auto sm:h-10 md:h-12 transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
