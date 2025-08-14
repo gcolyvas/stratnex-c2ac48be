@@ -1,6 +1,9 @@
 name = "stratnex-consulting"
 compatibility_date = "2024-03-14"
 
+[assets]
+directory = "./dist"
+
 [[redirects]]
 from = "/*"
 to = "/index.html"
