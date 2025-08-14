@@ -19,15 +19,20 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50 md:bg-background/95 sm:bg-transparent">
+      <div className="container mx-auto px-3 py-2 sm:py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
+              src="/lovable-uploads/9f6cc1c8-a6ed-4432-beb6-6b24541598c0.png" 
+              alt="StratNex Consulting" 
+              className="h-6 w-auto sm:h-8 md:h-10 hidden sm:block"
+            />
+            <img 
               src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
               alt="StratNex Consulting" 
-              className="h-10 w-auto"
+              className="h-8 w-auto sm:hidden"
             />
           </Link>
 
@@ -55,26 +60,26 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-1 sm:p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-brand-navy" />
+              <X className="h-5 w-5 sm:h-6 sm:w-6 text-brand-navy" />
             ) : (
-              <Menu className="h-6 w-6 text-brand-navy" />
+              <Menu className="h-5 w-5 sm:h-6 sm:w-6 text-brand-navy" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pt-4 border-t border-border">
-            <div className="flex flex-col space-y-3">
+          <nav className="md:hidden mt-2 pt-3 border-t border-border bg-background/95 backdrop-blur-sm rounded-b-lg">
+            <div className="flex flex-col space-y-2 pb-3">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-brand-navy ${
+                  className={`text-sm font-medium transition-colors hover:text-brand-navy py-1 ${
                     isActive(item.href)
                       ? "text-brand-navy"
                       : "text-brand-dark-gray"
@@ -85,7 +90,7 @@ const Header = () => {
                 </Link>
               ))}
               <QuoteRequestForm>
-                <Button variant="hero" size="sm" className="self-start">
+                <Button variant="hero" size="sm" className="self-start mt-2 text-xs px-3 py-1">
                   Get Quote
                 </Button>
               </QuoteRequestForm>
