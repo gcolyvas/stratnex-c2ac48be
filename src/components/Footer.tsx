@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Linkedin, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Twitter, Instagram } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-brand-navy text-brand-white">
       <div className="container mx-auto px-4 py-12">
@@ -79,14 +79,32 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 pt-4">
-              <a href="#" className="text-brand-light-gray hover:text-brand-white transition-colors">
+              <a 
+                href="https://www.linkedin.com/company/stratnexconsulting/?viewAsMember=true" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-brand-light-gray hover:text-brand-white transition-colors"
+                aria-label="Follow us on LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-brand-light-gray hover:text-brand-white transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-brand-light-gray hover:text-brand-white transition-colors">
+              <a 
+                href="https://x.com/StratNexConsult" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-brand-light-gray hover:text-brand-white transition-colors"
+                aria-label="Follow us on Twitter"
+              >
                 <Twitter className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com/stratnexofficial/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-brand-light-gray hover:text-brand-white transition-colors"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
