@@ -1,8 +1,13 @@
 name = "stratnex-consulting"
-compatibility_date = "2025-08-14"
+compatibility_date = "2025-01-27"
+pages_build_output_dir = "dist"
 
-[assets]
-directory = "./dist"
+[build]
+command = "npm run build:pages"
+cwd = "."
+
+[build.environment_variables]
+NODE_VERSION = "18"
 
 [[redirects]]
 from = "/*"

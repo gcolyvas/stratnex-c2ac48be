@@ -4,6 +4,25 @@
 
 **URL**: https://lovable.dev/projects/cab7b060-d558-4e3e-9b65-50fee93cc5c7
 
+## Cloudflare Pages Deployment
+
+This project is configured for deployment on Cloudflare Pages. 
+
+### Automatic Deployment
+1. Connect your GitHub repository to Cloudflare Pages
+2. Set the build command to: `npm run build:pages`
+3. Set the build output directory to: `dist`
+4. The site will automatically deploy on every push to main branch
+
+### Manual Deployment
+```sh
+# Build the project
+npm run build:pages
+
+# Deploy using Wrangler CLI
+npx wrangler pages deploy dist
+```
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
@@ -60,9 +79,20 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment Options
 
+### Cloudflare Pages (Recommended)
+This project is optimized for Cloudflare Pages deployment with:
+- Automatic builds and deployments
+- Global CDN distribution
+- Built-in analytics
+- Custom domain support
+
+### Lovable Deployment
 Simply open [Lovable](https://lovable.dev/projects/cab7b060-d558-4e3e-9b65-50fee93cc5c7) and click on Share -> Publish.
+
+### Other Platforms
+The build output in the `dist` folder can be deployed to any static hosting service like Netlify, Vercel, or GitHub Pages.
 
 ## Can I connect a custom domain to my Lovable project?
 
