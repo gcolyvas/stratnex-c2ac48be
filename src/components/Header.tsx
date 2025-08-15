@@ -21,27 +21,27 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 bg-background/30 backdrop-blur-xl border-b border-white/10 z-50 transition-all duration-500 hover:bg-background/40">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
-      <div className="container mx-auto px-4 lg:px-8 relative">
-        <div className="flex items-center justify-between h-20 lg:h-24">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 relative">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18">
           {/* Logo */}
           <Link to="/" className="flex items-center group relative z-10">
             <div className="relative">
               <img 
                 src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
                 alt="StratNex Consulting" 
-                className="h-10 w-auto sm:h-12 md:h-14 transition-all duration-500 group-hover:scale-110 drop-shadow-lg"
+                className="h-7 w-auto sm:h-8 md:h-9 lg:h-10 transition-all duration-500 group-hover:scale-110 drop-shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-2 bg-white/5 backdrop-blur-md rounded-full px-6 py-3 border border-white/10">
+          <nav className="hidden lg:flex items-center space-x-1 bg-white/5 backdrop-blur-md rounded-full px-4 py-2 border border-white/10">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`relative px-6 py-3 text-sm font-medium transition-all duration-300 rounded-full group overflow-hidden ${
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full group overflow-hidden ${
                   isActive(item.href)
                     ? "text-primary-foreground bg-primary shadow-lg shadow-primary/25"
                     : "text-foreground/90 hover:text-primary hover:bg-white/10"
@@ -57,29 +57,29 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center">
             <QuoteRequestForm>
               <Button 
                 variant="default" 
-                size="lg"
-                className="relative bg-gradient-to-r from-primary via-primary to-secondary hover:from-primary/90 hover:via-primary/90 hover:to-secondary/90 text-primary-foreground shadow-2xl hover:shadow-3xl transition-all duration-500 px-8 py-3 rounded-full font-semibold text-sm tracking-wide group overflow-hidden"
+                size="sm"
+                className="relative bg-gradient-to-r from-primary via-primary to-secondary hover:from-primary/90 hover:via-primary/90 hover:to-secondary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 px-5 py-2 rounded-full font-medium text-sm group overflow-hidden"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-1.5">
                   Get Quote
-                  <div className="w-4 h-4 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  <div className="w-3 h-3 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               </Button>
             </QuoteRequestForm>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden relative p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+            className="lg:hidden relative p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <div className="relative w-6 h-6 flex items-center justify-center">
+            <div className="relative w-5 h-5 flex items-center justify-center">
               <span
                 className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ${
                   isMenuOpen ? 'rotate-45' : '-translate-y-1.5'
@@ -102,16 +102,16 @@ const Header = () => {
         {/* Mobile Navigation */}
         <div 
           className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <nav className="py-6 space-y-2 bg-background/20 backdrop-blur-xl rounded-3xl mt-4 mb-4 border border-white/10 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-secondary/5 rounded-3xl"></div>
+          <nav className="py-3 space-y-1 bg-background/20 backdrop-blur-xl rounded-2xl mt-2 mb-2 border border-white/10 shadow-xl">
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-secondary/5 rounded-2xl"></div>
             {navItems.map((item, index) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`relative block mx-4 px-6 py-4 text-sm font-medium transition-all duration-300 rounded-2xl group overflow-hidden ${
+                className={`relative block mx-3 px-4 py-3 text-sm font-medium transition-all duration-300 rounded-xl group overflow-hidden ${
                   isActive(item.href)
                     ? "text-primary-foreground bg-primary shadow-lg shadow-primary/25"
                     : "text-foreground/90 hover:text-primary hover:bg-white/10"
@@ -120,24 +120,24 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className="relative z-10">{item.label}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300 rounded-xl"></div>
                 {isActive(item.href) && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 animate-scale-in rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 animate-scale-in rounded-xl"></div>
                 )}
               </Link>
             ))}
-            <div className="px-6 pt-4 pb-2">
+            <div className="px-4 pt-2 pb-1">
               <QuoteRequestForm>
                 <Button 
                   variant="default" 
-                  size="lg" 
-                  className="w-full relative bg-gradient-to-r from-primary via-primary to-secondary hover:from-primary/90 hover:via-primary/90 hover:to-secondary/90 text-primary-foreground shadow-2xl hover:shadow-3xl transition-all duration-500 px-6 py-4 rounded-2xl font-semibold text-sm tracking-wide group overflow-hidden"
+                  size="sm" 
+                  className="w-full relative bg-gradient-to-r from-primary via-primary to-secondary hover:from-primary/90 hover:via-primary/90 hover:to-secondary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 px-4 py-3 rounded-xl font-medium text-sm group overflow-hidden"
                 >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
+                  <span className="relative z-10 flex items-center justify-center gap-1.5">
                     Get Quote
-                    <div className="w-4 h-4 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                    <div className="w-3 h-3 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                 </Button>
               </QuoteRequestForm>
             </div>
