@@ -33,5 +33,5 @@ export default defineConfig(({ mode }) => ({
     },
     chunkSizeWarningLimit: 1000,
   },
-  base: './',
+  base: '/',
 }));
