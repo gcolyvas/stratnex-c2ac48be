@@ -19,35 +19,39 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-lg border-b border-border/50 z-50 transition-all duration-300">
-      <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16 lg:h-18">
+    <header className="fixed top-0 left-0 right-0 bg-background/30 backdrop-blur-xl border-b border-white/10 z-50 transition-all duration-500 hover:bg-background/40">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5"></div>
+      <div className="container mx-auto px-4 lg:px-8 relative">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
-            <img 
-              src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
-              alt="StratNex Consulting" 
-              className="h-8 w-auto sm:h-10 md:h-12 transition-transform duration-300 group-hover:scale-105"
-            />
+          <Link to="/" className="flex items-center group relative z-10">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/7a43af95-d2ae-4020-a9e6-93b1d7873b67.png" 
+                alt="StratNex Consulting" 
+                className="h-10 w-auto sm:h-12 md:h-14 transition-all duration-500 group-hover:scale-110 drop-shadow-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-2 bg-white/5 backdrop-blur-md rounded-full px-6 py-3 border border-white/10">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full hover:bg-accent/50 group ${
+                className={`relative px-6 py-3 text-sm font-medium transition-all duration-300 rounded-full group overflow-hidden ${
                   isActive(item.href)
-                    ? "text-primary bg-accent"
-                    : "text-foreground/80 hover:text-foreground"
+                    ? "text-primary-foreground bg-primary shadow-lg shadow-primary/25"
+                    : "text-foreground/90 hover:text-primary hover:bg-white/10"
                 }`}
               >
-                {item.label}
+                <span className="relative z-10">{item.label}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full"></div>
                 {isActive(item.href) && (
-                  <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary rounded-full animate-scale-in" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 animate-scale-in rounded-full"></div>
                 )}
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
               </Link>
             ))}
           </nav>
@@ -57,17 +61,21 @@ const Header = () => {
             <QuoteRequestForm>
               <Button 
                 variant="default" 
-                size="sm"
-                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 px-6 py-2 rounded-full font-medium"
+                size="lg"
+                className="relative bg-gradient-to-r from-primary via-primary to-secondary hover:from-primary/90 hover:via-primary/90 hover:to-secondary/90 text-primary-foreground shadow-2xl hover:shadow-3xl transition-all duration-500 px-8 py-3 rounded-full font-semibold text-sm tracking-wide group overflow-hidden"
               >
-                Get Quote
+                <span className="relative z-10 flex items-center gap-2">
+                  Get Quote
+                  <div className="w-4 h-4 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
               </Button>
             </QuoteRequestForm>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden relative p-2 rounded-full hover:bg-accent transition-colors duration-200"
+            className="lg:hidden relative p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -97,30 +105,39 @@ const Header = () => {
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <nav className="py-4 space-y-1 bg-background/95 backdrop-blur-sm rounded-2xl mt-2 mb-4 border border-border/50 shadow-xl">
+          <nav className="py-6 space-y-2 bg-background/20 backdrop-blur-xl rounded-3xl mt-4 mb-4 border border-white/10 shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-secondary/5 rounded-3xl"></div>
             {navItems.map((item, index) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`block px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-accent/50 hover:translate-x-2 ${
+                className={`relative block mx-4 px-6 py-4 text-sm font-medium transition-all duration-300 rounded-2xl group overflow-hidden ${
                   isActive(item.href)
-                    ? "text-primary bg-accent border-r-2 border-primary"
-                    : "text-foreground/80"
+                    ? "text-primary-foreground bg-primary shadow-lg shadow-primary/25"
+                    : "text-foreground/90 hover:text-primary hover:bg-white/10"
                 }`}
                 style={{ animationDelay: `${index * 50}ms` }}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.label}
+                <span className="relative z-10">{item.label}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300 rounded-2xl"></div>
+                {isActive(item.href) && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 animate-scale-in rounded-2xl"></div>
+                )}
               </Link>
             ))}
             <div className="px-6 pt-4 pb-2">
               <QuoteRequestForm>
                 <Button 
                   variant="default" 
-                  size="sm" 
-                  className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-full font-medium"
+                  size="lg" 
+                  className="w-full relative bg-gradient-to-r from-primary via-primary to-secondary hover:from-primary/90 hover:via-primary/90 hover:to-secondary/90 text-primary-foreground shadow-2xl hover:shadow-3xl transition-all duration-500 px-6 py-4 rounded-2xl font-semibold text-sm tracking-wide group overflow-hidden"
                 >
-                  Get Quote
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    Get Quote
+                    <div className="w-4 h-4 bg-white/20 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                 </Button>
               </QuoteRequestForm>
             </div>
