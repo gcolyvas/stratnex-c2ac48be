@@ -12,6 +12,8 @@ import StratNexProperties from "./pages/StratNexProperties";
 import StratNexDigital from "./pages/StratNexDigital";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/services/stratnex-properties" element={<StratNexProperties />} />
           <Route path="/services/stratnex-digital" element={<StratNexDigital />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
