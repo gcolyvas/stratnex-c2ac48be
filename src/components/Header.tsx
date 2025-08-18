@@ -12,11 +12,6 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
-    { href: "/services", label: "Divisions", submenu: [
-      { href: "/services/stratnex-agri", label: "StratNex Agri" },
-      { href: "/services/stratnex-properties", label: "StratNex Properties" },
-      { href: "/services/stratnex-digital", label: "StratNex Digital" }
-    ]},
     { href: "/projects", label: "Projects" },
     { href: "/blog", label: "Blog" },
     { href: "/faq", label: "FAQs" },
