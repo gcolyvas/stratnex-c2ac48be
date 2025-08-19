@@ -178,7 +178,7 @@ const FAQ = () => {
                     Speak directly with our consultants
                   </CardDescription>
                   <Button variant="outline" size="sm" className="w-full">
-                    +255 123 456 789
+                    +255 744 400 200
                   </Button>
                 </CardContent>
               </Card>
