@@ -153,96 +153,103 @@ const FAQ = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-brand-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-                Still Have Questions?
-              </h2>
-              <p className="text-xl text-brand-dark-gray">
-                Our team is ready to provide personalized answers and discuss your specific business needs
-              </p>
+<section className="py-16 bg-brand-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+          Still Have Questions?
+        </h2>
+        <p className="text-xl text-brand-dark-gray">
+          Our team is ready to provide personalized answers and discuss your specific business needs
+        </p>
+      </div>
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Call Us */}
+        <Card className="text-center group hover:shadow-card transition-elegant">
+          <CardHeader>
+            <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
+              <Phone className="w-6 h-6 text-brand-navy" />
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="text-center group hover:shadow-card transition-elegant">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
-                    <Phone className="w-6 h-6 text-brand-navy" />
-                  </div>
-                  <CardTitle className="text-lg">Call Us</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-4">
-                    Speak directly with our consultants
-                  </CardDescription>
-                  <Button variant="outline" size="sm" className="w-full">
-                    +255 744 400 200
-                  </Button>
-                </CardContent>
-              </Card>
+            <CardTitle className="text-lg">Call Us</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="mb-4">
+              Speak directly with our consultants
+            </CardDescription>
+            <a href="tel:+255744400200">
+              <Button variant="outline" size="sm" className="w-full">
+                +255 744 400 200
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
 
-              <Card className="text-center group hover:shadow-card transition-elegant">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
-                    <MessageCircle className="w-6 h-6 text-brand-navy" />
-                  </div>
-                  <CardTitle className="text-lg">WhatsApp</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-4">
-                    Quick questions and support
-                  </CardDescription>
-                  <Button variant="outline" size="sm" className="w-full">
-                    Message Us
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center group hover:shadow-card transition-elegant">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
-                    <Mail className="w-6 h-6 text-brand-navy" />
-                  </div>
-                  <CardTitle className="text-lg">Email</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-4">
-                    Detailed inquiries welcome
-                  </CardDescription>
-                  <Button variant="outline" size="sm" className="w-full">
-                    Send Email
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center group hover:shadow-card transition-elegant">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
-                    <MapPin className="w-6 h-6 text-brand-navy" />
-                  </div>
-                  <CardTitle className="text-lg">Visit Office</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="mb-4">
-                    Meet us in Dar es Salaam
-                  </CardDescription>
-                  <Link to="/contact">
-                    <Button variant="outline" size="sm" className="w-full">
-                      Get Directions
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+        {/* WhatsApp */}
+        <Card className="text-center group hover:shadow-card transition-elegant">
+          <CardHeader>
+            <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
+              <MessageCircle className="w-6 h-6 text-brand-navy" />
             </div>
-          </div>
-        </div>
-      </section>
+            <CardTitle className="text-lg">WhatsApp</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="mb-4">
+              Quick questions and support
+            </CardDescription>
+            <a href="https://wa.me/255744400200" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="w-full">
+                Message Us
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
 
-      <Footer />
+        {/* Email */}
+        <Card className="text-center group hover:shadow-card transition-elegant">
+          <CardHeader>
+            <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
+              <Mail className="w-6 h-6 text-brand-navy" />
+            </div>
+            <CardTitle className="text-lg">Email</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="mb-4">
+              Detailed inquiries welcome
+            </CardDescription>
+            <a href="mailto:info@stratnexconsulting.com">
+              <Button variant="outline" size="sm" className="w-full">
+                Send Email
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+
+        {/* Visit Office */}
+        <Card className="text-center group hover:shadow-card transition-elegant">
+          <CardHeader>
+            <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-navy/20 transition-colors">
+              <MapPin className="w-6 h-6 text-brand-navy" />
+            </div>
+            <CardTitle className="text-lg">Visit Office</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="mb-4">
+              Meet us in Dar es Salaam
+            </CardDescription>
+            <a
+              href="https://maps.app.goo.gl/KL3zysSmJ5PMBaRT8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" size="sm" className="w-full">
+                Get Directions
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+      </div>
     </div>
-  );
-};
-
-export default FAQ;
+  </div>
+</section>
